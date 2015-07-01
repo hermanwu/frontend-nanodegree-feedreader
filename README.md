@@ -14,7 +14,7 @@
 3. If any errors occur, it will also display the tracing information.
 4. Jasmine spec file can be found in *./jasmine/spec/feedreader.js*.
 
-## 7 ests 
+## tests 
 1. Test that ensures allFeeds variable is not empty .
 2. Test that loops through each feed in the allFeeds object and ensures it has a URL defined and that the URL is not empty.
 3. Test that loops through each feed in the allFeeds object and ensures it has a name defined and that the name is not empty.

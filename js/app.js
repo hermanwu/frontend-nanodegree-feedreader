@@ -44,8 +44,6 @@ function loadFeed(id, cb) {
     var feedUrl = allFeeds[id].url,
         feedName = allFeeds[id].name,
         feed = new google.feeds.Feed(feedUrl);
-        //This variable indicates whether content has changed;
-        contentChange = false;
 
     /* Load the feed using the Google Feed Reader API.
      * Once the feed has been loaded, the callback function
@@ -66,11 +64,6 @@ function loadFeed(id, cb) {
             title.html(feedName);   // Set the header text
             container.empty();      // Empty out all previous entries
 
-            /* If the content was loaded successfully, change this indicator
-             * to true
-             */
-            contentChange = true;
-
             /* Loop through the entries we just loaded via the Google
              * Feed Reader API. We'll then parse that entry against the
              * entryTemplate (created above using Handlebars) and append
@@ -80,7 +73,6 @@ function loadFeed(id, cb) {
             entries.forEach(function(entry) {
                 container.append(entryTemplate(entry));
             });
-
         }
 
         if (cb) {
