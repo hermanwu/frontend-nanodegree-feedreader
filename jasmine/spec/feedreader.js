@@ -21,7 +21,6 @@ $(function() {
             expect(allFeeds).toBeDefined();
             expect(allFeeds.length).not.toBe(0);
         });
-
         /* Test that loops through each feed in the allFeeds object 
          * and ensures it has a URL defined and that the URL is not empty.
          */
@@ -32,7 +31,6 @@ $(function() {
                 expect(feed.url).toBeTruthy();
             });
          });
-
         /* Test that loops through each feed in the allFeeds object 
          * and ensures it has a name defined and that the name is not empty.
          */
@@ -45,7 +43,6 @@ $(function() {
          });
     });
 
-
     // This suite is all about how menu element behaves
     describe('The menu', function() {
         // Ensures the menu element is hidden by default
@@ -54,7 +51,6 @@ $(function() {
             // expect body tag to have 'menu-hidden' class by default
             expect(headclass).toMatch('menu-hidden');
          });
-             
          /* Ensures the menu changes visibility when the 
           * menu icon is clicked. This test should have two 
           * expectations: does the menu display when clicked 
@@ -90,10 +86,8 @@ $(function() {
         });
     });
 
-
     // This suite is all about the new feed selection behaves
     describe('New Feed Selection', function() {
-
         /* This test ensures when a new feed is loaded by the loadFeed 
          * function that the content actually changes.
          */
